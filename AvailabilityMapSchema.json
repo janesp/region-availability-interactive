@@ -1,0 +1,72 @@
+{
+    "id": "http://abdagon.com/energymap",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Availability Map",
+    "version": "1.0.0",
+
+    "type": "object",
+    "properties": {
+        "provider": {
+            "type": "object",
+            "properties": {
+                "providerId": {
+                    "description": "unique identifier of availability provider which reports availability information",
+                    "type": "integer"
+                },
+                "providerName": {
+                    "description": "name of the availability provider",
+                    "type": "string"
+                }
+            },
+            "required": [ "providerId" ]
+        },
+        "regionPeriods": {
+            "description": "availability periods for a region reported by availability provider",
+            "type": "object",
+            "properties": {
+                "noOfPeriods": {
+                    "description": "number of reported availability periods",
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "startDate": {
+                    "description": "start date where reported availability starts (always midnight)",
+                    "type": "string",
+                    "format": "date"
+                },
+                "intervalHours": {
+                    "description": "interval of reported availability periods in hours",
+                    "type": "integer",
+                    "minimum": 1
+                }
+            },
+            "required": [ "noOfPeriods", "startDate", "intervalHours" ],
+
+            "regionPeriodValues": {
+                "description": "availability regions with their period values",
+                "type": "array",
+                "region": {
+                    "type": "object",
+                    "properties": {
+                        "regionId": {
+                            "description": "unique identifier of region",
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "regionName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [ "regionId", "regionName" ]
+                },
+                "periodValues": {
+                    "description": "availability values for whole reported period",
+                    "type": "array",
+                    "energyAvailable": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}
