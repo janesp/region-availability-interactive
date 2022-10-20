@@ -26,9 +26,11 @@ Currently availabilities can take two values (`true` or `false` as boolean) - in
 
 The actual availability information is provided in `json` format, according to the specified schema. Received availability information is checked against the schema.
 
-## Map visualization
+## Interactive vap visualization
 
-Regions are represented on the map as geopandas shapes. Availability is visualized on the map for one specific period as specified by an index in the availabilities values list.
+Try the [interactive prototype](https://janesp-region-availability-interactive-rg-avail-inter-81cxrc.streamlitapp.com)!
+
+Regions are represented on the map as geopandas shapes. Availability is visualized on the map for one specific period as specified by an index in the availabilities values list, interactively controlled by a slider.
 
 As mentioned, for this prototype Swiss Kantons are used a regions. However, the prototype can easily be adopted for other types of regions, such as service areas.
 
