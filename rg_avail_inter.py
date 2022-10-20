@@ -21,6 +21,7 @@ regionColormap = matplotlib.colors.ListedColormap(['#333333','#dddddd'])
 
 st.title('Region Availability Dashboard')
 st.markdown('Proof of concept to visualize regional availability information on a map.')
+st.write('Check out our [Github repository](https://github.com/janesp/region-availability-interactive) for more information')
 
 
 st.sidebar.title('Dashboard Parameters')
