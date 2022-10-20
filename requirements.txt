@@ -1,6 +1,8 @@
 pandas
 geopandas
 matplotlib
+mapclassify
 jsonschema
 streamlit
+folium
 streamlit_folium
