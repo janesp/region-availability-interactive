@@ -26,7 +26,7 @@ Currently availabilities can take two values (`true` or `false` as boolean) - in
 
 The actual availability information is provided in `json` format, according to the specified schema. Received availability information is checked against the schema.
 
-## Interactive vap visualization
+## Interactive map visualization
 
 Try the [interactive prototype](https://janesp-region-availability-interactive-rg-avail-inter-81cxrc.streamlitapp.com)!
 
